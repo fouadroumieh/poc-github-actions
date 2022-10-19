@@ -17,7 +17,7 @@ jobs:
       matrix:
         include:
           - server: test2
-            stage: dev
+            stage: dev1
           - server: test4
             stage: dev
           - server: test3
