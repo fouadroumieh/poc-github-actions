@@ -1,4 +1,5 @@
 name: Test 52 #Related to SO https://stackoverflow.com/questions/73305126/passing-variable-inputs-to-a-resuable-workflow
+run-name: Deploy ${{ github.ref_name }}
 
 on:
   push:
