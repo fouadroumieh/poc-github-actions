@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - run: echo "${{env.SOME_VAR}}"
+      - run: echo "${{github.event.workflow_run.env.SOME_VAR}}"
 
   on-failure:
     runs-on: ubuntu-latest
