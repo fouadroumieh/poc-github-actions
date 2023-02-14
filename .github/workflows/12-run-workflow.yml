@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - run: echo "VARIANT=$(cut -d '.' -f1 <<< ${{github.event.workflow_run.display_title}})" >> $GITHUB_ENV
+      - run: echo "VARIANT=$(cut -d '.' -f1 <<< '${{github.event.workflow_run.display_title}}')" >> $GITHUB_ENV
       - run: echo "${{github.event.workflow_run.display_title}}"
 
   on-failure:
