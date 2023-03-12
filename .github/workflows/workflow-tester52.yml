@@ -23,7 +23,7 @@ jobs:
             stage: dev
           - server: test3
             stage: staging
-    runs-on: ${{ github.ref_name == 'main' && 'ubuntu-latest' ||  ['self-hosted']  }}
+    runs-on: ${{ github.ref_name == 'main' && 'ubuntu-latest' || 'self-hosted' }}
     outputs:
       some_var: ${{ steps.step1.outputs.some_var }}
       another_var: ${{ steps.step1.outputs.another_var }}
